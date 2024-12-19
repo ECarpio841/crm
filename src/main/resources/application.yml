@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+#Configuracion de spring
+spring:
+  flyway:
+    enabled: true
+    baselineVersion: 1
+    locations: classpath:db/migration
+    sqlMigrationSuffixes: .sql
+    baselineOnMigrate: true
+    sqlMigrationPrefix: V
+    schemas: public
+
+  datasource:
+    url: jdbc:postgresql://ruby.db.elephantsql.com:5432/cafnxyxx
+    username: cafnxyxx
+    password: V4tGoaobL21tSy-qx5OlVcbXKSYdtUT8
+    driverClassName: org.postgresql.Driver
